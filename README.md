@@ -24,3 +24,5 @@ inclusive-charity
 
 ## SDD
 [SDD](./docs/InclusiveCharitySDD.md)
+
+[]地址衍生+三方加密的方案附在PPT后面

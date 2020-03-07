@@ -33,12 +33,51 @@ demo中默认包含：
 ### 3.3. 申请援助
 由`受捐赠方`主动向`公益机构`发起申请，并提供相应的证明材料
 
-### 3.4. 定向捐赠
-由`捐赠方`指定捐赠对象，经由`公益机构`转发给`受捐赠方`
 ## 接口
-### 捐赠者
-* 捐赠接口（）
-* 证书生成（区块号，交易hash、交易时间、金额）
+### 捐赠接口
+  - URL: api/donate （POST）
+  - parameter: {timestamp:"","balance" : "", "charity":"",sign":""}
+
+  - response: {"returnCode":17000, "returnDesc":"success", "data":"{"blockchainNo":"XXXX","txhash":"XXXX","txTime":"XXXX","balance":"XXXX"}"}
+
+#### 证书生成
+是否复用上一接口返回值
+
+#### 申请救助
+
+  - URL: /api/aidApply （POST）
+  - parameter: {timestamp:"", "balance" : "", "context":"", sign":""}
+  - response: {"returnCode":17000, "returnDesc":"sucess", "data":""}
+
+#### 查询接口
+
+  - URL: /api/aidQuery （POST）
+
+  - parameter: {timestamp:"", sign":""}
+
+  - response: {"returnCode":17000, "returnDesc":"sucess", "data":{"balance":"XXXX", "charity":""}}
+
+#### 受益人申请提现
+
+  - URL: /api/withdrawApply（POST）
+
+  - parameter: {timestamp:"", "balance":"", sign":""}
+
+  - response: {"returnCode":17000, "returnDesc":"sucess", 
+                "data":""
+              }
+
+
+#### 救助审核
+
+  - URL: /api/aidCheck（POST）
+
+  - parameter: {timestamp:"", "balance" : "", "aidTraget":"", sign":""}
+
+  - response: {"returnCode":17000, "returnDesc":"sucess", 
+                "data":""}
+
+
 ### 被捐赠者
 * 申请接口（）
 * 查询接口（数字资产金额）

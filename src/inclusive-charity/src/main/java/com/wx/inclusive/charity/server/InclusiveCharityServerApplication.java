@@ -11,8 +11,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
  * Created by ly on 10/24/18
  * @author wxuser
  */
-@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
-@SpringBootApplication(scanBasePackages = "com.wx.inclusive.charity.server")
+@SpringBootApplication(scanBasePackages = "com.wx.inclusive.charity.server",exclude={DataSourceAutoConfiguration.class})
 @EnableAspectJAutoProxy(proxyTargetClass = true,exposeProxy = false)
 @MapperScan(basePackages = "com.wx.inclusive.charity.server.mapper")
 public class InclusiveCharityServerApplication {
