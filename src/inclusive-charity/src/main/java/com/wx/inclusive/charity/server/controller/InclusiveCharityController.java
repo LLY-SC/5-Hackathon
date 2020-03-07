@@ -1,6 +1,7 @@
 package com.wx.inclusive.charity.server.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.wx.inclusive.charity.server.beans.AidApplyRequest;
 import com.wx.inclusive.charity.server.beans.DonateRequest;
 import com.wx.inclusive.charity.server.beans.NormalResponse;
 import com.wx.inclusive.charity.server.beans.ResponseFormat;
@@ -35,6 +36,12 @@ public class InclusiveCharityController {
     @ResponseBody
     public NormalResponse donate(@RequestBody DonateRequest donateRequest){
         return NormalResponse.success(inclusiveCharityService.donate(donateRequest));
+
+    }
+    @PostMapping(path = "/aidApply",produces = "application/json; charset=UTF-8")
+    @ResponseBody
+    public NormalResponse aidApply(@RequestBody AidApplyRequest aidApplyRequest){
+        return NormalResponse.success(inclusiveCharityService.aidApply(aidApplyRequest));
 
     }
 

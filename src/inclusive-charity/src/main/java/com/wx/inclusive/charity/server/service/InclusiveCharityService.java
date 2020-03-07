@@ -1,7 +1,10 @@
 package com.wx.inclusive.charity.server.service;
 
+import com.wx.inclusive.charity.server.beans.AidApply;
+import com.wx.inclusive.charity.server.beans.AidApplyRequest;
 import com.wx.inclusive.charity.server.beans.DonateRequest;
 import com.wx.inclusive.charity.server.beans.DonateResponse;
+import com.wx.inclusive.charity.server.beans.data.AidApplyList;
 import com.wx.inclusive.charity.server.beans.data.ChainInfo;
 import com.wx.inclusive.charity.server.beans.data.CharityAccount;
 import com.wx.inclusive.charity.server.beans.data.DonaterAccount;
@@ -27,7 +30,7 @@ public class InclusiveCharityService {
     }
 
     public DonateResponse donate(DonateRequest denoteRequest){
-        //verify use address
+        //todo verify use address
 
         DonateResponse donateResponse = new DonateResponse();
         if(denoteRequest.getCharity().equals(CharityAccount.Address))
@@ -40,6 +43,17 @@ public class InclusiveCharityService {
             donateResponse.setBalance(DonaterAccount.balance);
         }
         return donateResponse;
+    }
+    public String aidApply(AidApplyRequest aidApplyRequest){
+        //todo  get address from signature
+        String address = "";
+        AidApply aidApply = new AidApply();
+        aidApply.setBalance(aidApplyRequest.getBalance());
+        aidApply.setContext(aidApplyRequest.getContext());
+        aidApply.setTimestamp(System.currentTimeMillis());
+        aidApply.setAddress(address);
+        AidApplyList.aidApplyList.add(aidApply);
+        return "success";
     }
     public int del(String appId){
         return 1;

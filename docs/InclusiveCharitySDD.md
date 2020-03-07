@@ -49,13 +49,14 @@ demo中默认包含：
   - parameter: {timestamp:"", "balance" : "", "context":"", sign":""}
   - response: {"returnCode":17000, "returnDesc":"sucess", "data":""}
 
-#### 查询接口
+#### 金额查询接口
 
-  - URL: /api/aidQuery （POST）
+  - URL: /api/balanceQuery （POST）
 
   - parameter: {timestamp:"", sign":""}
 
-  - response: {"returnCode":17000, "returnDesc":"sucess", "data":{"balance":"XXXX", "charity":""}}
+  - response: {"returnCode":17000, "returnDesc":"sucess", "data":"XXXX"}
+  //balance数额放入data
 
 #### 受益人申请提现
 
@@ -78,15 +79,6 @@ demo中默认包含：
                 "data":""}
 
 
-### 被捐赠者
-* 申请接口（）
-* 查询接口（数字资产金额）
-* 申请提现（*待定）
-### 慈善机构
-* 审核（签名，*审核列表、*明细）
-* 查询
-  + 慈善账户（金额：*捐赠列表、*受益人列表）
-  + 手续费账户（）
 
 ## 4. 关键数据流
 ### 4.1. 查询
