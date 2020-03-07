@@ -1,18 +1,10 @@
 package com.wx.inclusive.charity.server.service;
 
-import com.wx.inclusive.charity.server.beans.AidApply;
-import com.wx.inclusive.charity.server.beans.AidApplyRequest;
-import com.wx.inclusive.charity.server.beans.DonateRequest;
-import com.wx.inclusive.charity.server.beans.DonateResponse;
-import com.wx.inclusive.charity.server.beans.data.AidApplyList;
-import com.wx.inclusive.charity.server.beans.data.ChainInfo;
-import com.wx.inclusive.charity.server.beans.data.CharityAccount;
-import com.wx.inclusive.charity.server.beans.data.DonaterAccount;
+import com.wx.inclusive.charity.server.beans.*;
+import com.wx.inclusive.charity.server.beans.data.*;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.math.BigDecimal;
 
 /**
  * Created by ly on 10/24/18
@@ -20,56 +12,79 @@ import java.util.List;
 @Service
 public class InclusiveCharityService {
 
-
-    @Transactional(rollbackFor = Exception.class)
-    public int insert(String tmp){
-        if(getByAppId(tmp) != null){
-            return updateByAppId(tmp);
-        }
-        return 1;
-    }
-
-    public DonateResponse donate(DonateRequest denoteRequest){
-        //todo verify use address
-
+    public DonateResponse donate(TransferRequest transferRequest)
+    {
+        Boolean result = transfer(transferRequest);
         DonateResponse donateResponse = new DonateResponse();
-        if(denoteRequest.getCharity().equals(CharityAccount.Address))
-        {
-            DonaterAccount.balance = DonaterAccount.balance.subtract(denoteRequest.getBalance());
-            CharityAccount.balance = CharityAccount.balance.add(denoteRequest.getBalance());
-            donateResponse.setBlockNo(ChainInfo.blockNo+1);
-            donateResponse.setTxHash(ChainInfo.getTxHash());
-            donateResponse.setTimestamp(System.currentTimeMillis());
-            donateResponse.setBalance(DonaterAccount.balance);
-        }
+
+        donateResponse.setBlockNo(ChainInfo.blockNo+1);
+        donateResponse.setTxHash(ChainInfo.getTxHash());
+        donateResponse.setTimestamp(System.currentTimeMillis());
+        donateResponse.setBalance(transferRequest.getBalance());
+
         return donateResponse;
     }
-    public String aidApply(AidApplyRequest aidApplyRequest){
+
+    public Boolean transfer(TransferRequest transferRequest){
+        //todo verify to get addressFrom
+        String addressFrom = "";
+        String addressTo = transferRequest.getToAddress();
+        BigDecimal balance = transferRequest.getBalance();
+        for (AccountData accountData:AccountList.accountDataList)
+        {
+            if (accountData.getAddress().equals(addressFrom))
+            {
+                accountData.setBalance(accountData.getBalance().subtract(balance));
+            }
+            if (accountData.getAddress().equals(addressTo))
+            {
+                accountData.setBalance(accountData.getBalance().add(balance));
+            }
+        }
+        return true;
+    }
+    public String aidApply(ApplyRequest applyRequest){
         //todo  get address from signature
         String address = "";
-        AidApply aidApply = new AidApply();
-        aidApply.setBalance(aidApplyRequest.getBalance());
-        aidApply.setContext(aidApplyRequest.getContext());
-        aidApply.setTimestamp(System.currentTimeMillis());
-        aidApply.setAddress(address);
-        AidApplyList.aidApplyList.add(aidApply);
+        ApplyData applyData = new ApplyData();
+        applyData.setBalance(applyRequest.getBalance());
+        applyData.setContext(applyRequest.getContext());
+        applyData.setTimestamp(System.currentTimeMillis());
+        applyData.setAddress(address);
+        AidApplyList.applyDataList.add(applyData);
         return "success";
     }
-    public int del(String appId){
-        return 1;
+    public BigDecimal balanceQuery(QueryRequest queryRequest){
+        //todo  get address from signature
+        String address = "";
+        BigDecimal balance = BigDecimal.ZERO;
+        for (AccountData accountData:AccountList.accountDataList)
+        {
+            if (accountData.getAddress().equals(address))
+            {
+                balance = accountData.getBalance();
+            }
+        }
+        return balance;
     }
 
-    public String getByAppId(String appId){
-        return "1";
-    }
+    public String withdrawApply(ApplyRequest applyRequest){
+        //todo verify use address
 
-    public int updateByAppId(String String){
-        return 1;
+        //todo  get address from signature
+        String address = "";
+        ApplyData applyData = new ApplyData();
+        applyData.setBalance(applyRequest.getBalance());
+        applyData.setContext(applyRequest.getContext());
+        applyData.setTimestamp(System.currentTimeMillis());
+        applyData.setAddress(address);
+        WithdrawApplyList.applyDataList.add(applyData);
+        return "success";
     }
-
-    public List<String> queryAll(){
-        List<String> test= new ArrayList<>();
-        test.add("1");
-        return test;
+    public String aidCheck(TransferRequest transferRequest){
+        // todo 如何删除
+        // //AidApplyList.applyDataList.remove(applyData);
+        Boolean result = transfer(transferRequest);
+        return "success";
     }
 }

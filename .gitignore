@@ -7,5 +7,5 @@ src/inclusive-charity/.project/*
 src/inclusive-charity/.setting/*
 .gradle
 src/inclusive-charity/.project
-src/inclusive-charity/.gradle/5.2.1/fileHashes/fileHashes.lock
-src/inclusive-charity/.gradle/buildOutputCleanup/buildOutputCleanup.lock
+src/inclusive-charity/.gradle/
+src/inclusive-charity/bin/

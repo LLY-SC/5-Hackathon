@@ -62,7 +62,7 @@ demo中默认包含：
 
   - URL: /api/withdrawApply（POST）
 
-  - parameter: {timestamp:"", "balance":"", sign":""}
+  - parameter: {timestamp:"", "balance":"", "context":"", sign":""}
 
   - response: {"returnCode":17000, "returnDesc":"sucess", 
                 "data":""

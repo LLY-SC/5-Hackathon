@@ -13,7 +13,7 @@ import java.util.List;
  * @create: 2020-03-07
  **/
 @Data
-public class AidApplyList {
+public class WithdrawApplyList {
     public static List<ApplyData> applyDataList = new ArrayList<ApplyData>();
 
 }

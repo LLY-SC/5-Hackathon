@@ -11,9 +11,9 @@ import java.math.BigDecimal;
  * @create: 2020-03-07
  **/
 @Data
-public class DonateRequest {
+public class ApplyRequest {
     private Long timestamp;
     private BigDecimal balance;
-    private String charity;
+    private String context;
     private String sign;
 }

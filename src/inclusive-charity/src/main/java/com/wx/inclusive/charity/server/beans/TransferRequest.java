@@ -11,9 +11,9 @@ import java.math.BigDecimal;
  * @create: 2020-03-07
  **/
 @Data
-public class AidApply {
+public class TransferRequest {
     private Long timestamp;
     private BigDecimal balance;
-    private String context;
-    private String address;
+    private String toAddress;
+    private String sign;
 }
