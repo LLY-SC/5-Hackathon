@@ -1,1 +1,12 @@
 .idea/*
+.gradle/*
+src/inclusive-charity/.gradle/*
+src/inclusive-charity/.idea/*
+src/inclusive-charity/build/*
+src/inclusive-charity/.project/*
+src/inclusive-charity/.setting/*
+.gradle
+src/inclusive-charity/.project
+src/inclusive-charity/.gradle/
+src/inclusive-charity/bin/
+src/inclusive-charity/bin/*
