@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="95e0415b-506d-4919-b1e3-ea1346c1c317" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../docs/InclusiveCharitySDD.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../docs/InclusiveCharitySDD.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="inclusive-charity" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="inclusive-charity" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="inclusive-charity" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+                <item name="main" type="396b929e:GradleViewContributor$SourceSetNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="inclusive-charity" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+                <item name="main" type="396b929e:GradleViewContributor$SourceSetNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="ProjectId" id="1YnDVPp5pCmfDvOzVt7kKjvXW9G" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="abbreviatePackageNames" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="Lombok plugin" />
+    <property name="show.unlinked.gradle.project.popup" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Gradle.inclusive-charity">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="inclusive-charity" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InclusiveCharityServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="inclusive-charity.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wx.inclusive.charity.server.InclusiveCharityServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.inclusive-charity" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Failed" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="95e0415b-506d-4919-b1e3-ea1346c1c317" name="Default Changelist" comment="" />
+      <created>1583569487834</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583569487834</updated>
+      <workItem from="1583569490655" duration="2413000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="138" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1583570830342">
+      <screen x="39" y="23" width="1241" height="777" />
+    </state>
+    <state x="138" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/39.23.1241.777@39.23.1241.777" timestamp="1583570830342" />
+    <state x="335" y="108" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583571811021">
+      <screen x="39" y="23" width="1241" height="777" />
+    </state>
+    <state x="335" y="108" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/39.23.1241.777@39.23.1241.777" timestamp="1583571811021" />
+    <state width="806" height="218" key="GridCell.Tab.0.bottom" timestamp="1583572144509">
+      <screen x="39" y="23" width="1241" height="777" />
+    </state>
+    <state width="806" height="218" key="GridCell.Tab.0.bottom/39.23.1241.777@39.23.1241.777" timestamp="1583572144509" />
+    <state width="806" height="218" key="GridCell.Tab.0.center" timestamp="1583572144508">
+      <screen x="39" y="23" width="1241" height="777" />
+    </state>
+    <state width="806" height="218" key="GridCell.Tab.0.center/39.23.1241.777@39.23.1241.777" timestamp="1583572144508" />
+    <state width="806" height="218" key="GridCell.Tab.0.left" timestamp="1583572144507">
+      <screen x="39" y="23" width="1241" height="777" />
+    </state>
+    <state width="806" height="218" key="GridCell.Tab.0.left/39.23.1241.777@39.23.1241.777" timestamp="1583572144507" />
+    <state width="806" height="218" key="GridCell.Tab.0.right" timestamp="1583572144508">
+      <screen x="39" y="23" width="1241" height="777" />
+    </state>
+    <state width="806" height="218" key="GridCell.Tab.0.right/39.23.1241.777@39.23.1241.777" timestamp="1583572144508" />
+    <state width="806" height="218" key="GridCell.Tab.1.bottom" timestamp="1583572144511">
+      <screen x="39" y="23" width="1241" height="777" />
+    </state>
+    <state width="806" height="218" key="GridCell.Tab.1.bottom/39.23.1241.777@39.23.1241.777" timestamp="1583572144511" />
+    <state width="806" height="218" key="GridCell.Tab.1.center" timestamp="1583572144510">
+      <screen x="39" y="23" width="1241" height="777" />
+    </state>
+    <state width="806" height="218" key="GridCell.Tab.1.center/39.23.1241.777@39.23.1241.777" timestamp="1583572144510" />
+    <state width="806" height="218" key="GridCell.Tab.1.left" timestamp="1583572144509">
+      <screen x="39" y="23" width="1241" height="777" />
+    </state>
+    <state width="806" height="218" key="GridCell.Tab.1.left/39.23.1241.777@39.23.1241.777" timestamp="1583572144509" />
+    <state width="806" height="218" key="GridCell.Tab.1.right" timestamp="1583572144510">
+      <screen x="39" y="23" width="1241" height="777" />
+    </state>
+    <state width="806" height="218" key="GridCell.Tab.1.right/39.23.1241.777@39.23.1241.777" timestamp="1583572144510" />
+    <state x="52" y="23" key="SettingsEditor" timestamp="1583569608227">
+      <screen x="39" y="23" width="1241" height="777" />
+    </state>
+    <state x="52" y="23" key="SettingsEditor/39.23.1241.777@39.23.1241.777" timestamp="1583569608227" />
+    <state x="428" y="318" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583572163821">
+      <screen x="39" y="23" width="1241" height="777" />
+    </state>
+    <state x="428" y="318" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/39.23.1241.777@39.23.1241.777" timestamp="1583572163821" />
+    <state x="267" y="98" width="949" height="702" key="find.popup" timestamp="1583572092243">
+      <screen x="39" y="23" width="1241" height="777" />
+    </state>
+    <state x="267" y="98" width="949" height="702" key="find.popup/39.23.1241.777@39.23.1241.777" timestamp="1583572092243" />
+  </component>
+</project>
