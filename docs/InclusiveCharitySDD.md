@@ -40,7 +40,7 @@ demo中默认包含：
 
   - response: {"returnCode":17000, "returnDesc":"success", "data":"{"blockchainNo":"XXXX","txhash":"XXXX","txTime":"XXXX","balance":"XXXX"}"}
 
-签名原文为:"timestamp"+timestamp+"balance"+balance+"charity"+charity
+签名原文为:"timestamp"+timestamp+"balance"+balance+"toAddress"+toAddress
 
 #### 证书生成
 是否复用上一接口返回值

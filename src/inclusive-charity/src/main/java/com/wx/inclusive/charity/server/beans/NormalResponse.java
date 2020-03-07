@@ -2,11 +2,13 @@ package com.wx.inclusive.charity.server.beans;
 
 import com.wx.inclusive.charity.server.constants.ReturnCode;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Data
+@EqualsAndHashCode(callSuper=true)
 @ToString(callSuper = true)
 public class NormalResponse<T> extends BaseResponse<T>{
 
