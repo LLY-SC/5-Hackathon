@@ -6,16 +6,15 @@ import java.math.BigDecimal;
 
 /**
  * @program: inclusive-charity
- * @description: donate
+ * @description:
  * @author: Emily Ma
- * @create: 2020-03-07
+ * @create: 2020-03-08
  **/
 @Data
-public class ApplyData {
+public class AidCheck {
     private int applyId;
     private Long timestamp;
     private BigDecimal balance;
-    private String context;
-    private String address;
+    private String toAddress;
     private String sign;
 }

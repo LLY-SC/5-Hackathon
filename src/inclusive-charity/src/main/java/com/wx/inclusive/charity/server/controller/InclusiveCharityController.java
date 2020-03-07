@@ -1,8 +1,6 @@
 package com.wx.inclusive.charity.server.controller;
 
-import com.wx.inclusive.charity.server.beans.ApplyRequest;
-import com.wx.inclusive.charity.server.beans.TransferRequest;
-import com.wx.inclusive.charity.server.beans.NormalResponse;
+import com.wx.inclusive.charity.server.beans.*;
 import com.wx.inclusive.charity.server.service.InclusiveCharityService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,6 +34,23 @@ public class InclusiveCharityController {
         return NormalResponse.success(inclusiveCharityService.aidApply(applyRequest));
 
     }
+    @PostMapping(path = "/balanceQuery",produces = "application/json; charset=UTF-8")
+    @ResponseBody
+    public NormalResponse balanceQuery(@RequestBody QueryRequest queryRequest){
+        return NormalResponse.success(inclusiveCharityService.balanceQuery(queryRequest));
 
+    }
+    @PostMapping(path = "/withdrawApply",produces = "application/json; charset=UTF-8")
+    @ResponseBody
+    public NormalResponse withdrawApply(@RequestBody ApplyRequest applyRequest){
+        return NormalResponse.success(inclusiveCharityService.withdrawApply( applyRequest));
+
+    }
+    @PostMapping(path = "/aidCheck",produces = "application/json; charset=UTF-8")
+    @ResponseBody
+    public NormalResponse aidCheck(@RequestBody AidCheck aidCheck){
+        return NormalResponse.success(inclusiveCharityService.aidCheck(aidCheck));
+
+    }
 
 }

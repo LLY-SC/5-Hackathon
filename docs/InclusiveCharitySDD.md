@@ -36,9 +36,11 @@ demo中默认包含：
 ## 接口
 ### 捐赠接口
   - URL: api/donate （POST）
-  - parameter: {timestamp:"","balance" : "", "charity":"",sign":""}
+  - parameter: {timestamp:"","balance" : "", "toAddress":"",sign":""}
 
   - response: {"returnCode":17000, "returnDesc":"success", "data":"{"blockchainNo":"XXXX","txhash":"XXXX","txTime":"XXXX","balance":"XXXX"}"}
+
+签名原文为:"timestamp"+timestamp+"balance"+balance+"charity"+charity
 
 #### 证书生成
 是否复用上一接口返回值
@@ -72,6 +74,15 @@ demo中默认包含：
 #### 救助审核
 
   - URL: /api/aidCheck（POST）
+
+  - parameter: {timestamp:"", "balance" : "", "toAddress":"", sign":""}
+
+  - response: {"returnCode":17000, "returnDesc":"sucess", 
+                "data":""}
+
+#### 提现审核
+
+  - URL: /api/withdrawCheck（POST）
 
   - parameter: {timestamp:"", "balance" : "", "aidTraget":"", sign":""}
 
