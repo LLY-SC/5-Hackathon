@@ -1,6 +1,8 @@
 package com.wx.inclusive.charity.server.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.wx.inclusive.charity.server.beans.DonateRequest;
+import com.wx.inclusive.charity.server.beans.NormalResponse;
 import com.wx.inclusive.charity.server.beans.ResponseFormat;
 import com.wx.inclusive.charity.server.constants.Magic;
 import com.wx.inclusive.charity.server.service.InclusiveCharityService;
@@ -26,34 +28,14 @@ import java.util.Map;
 public class InclusiveCharityController {
     private static final Map<String,String> jsonMapCache = new HashMap<>();
 
-    @PostConstruct
-    public void init(){
-        List<String> all = inclusiveCharityService.queryAll();
-        all.stream()
-                .filter(String -> !StringUtils.isEmpty(String))
-                .forEach(a ->jsonMapCache.put(a,a));
-    }
-
     @Autowired
     private InclusiveCharityService inclusiveCharityService;
 
-    @PostMapping(path = "/setApi",produces = "application/json; charset=UTF-8")
-    public ResponseFormat postApi(HttpServletRequest request, @PathVariable(value = "appId") String appId){
-        ResponseFormat responseFormat = ResponseFormat.basic();
-        byte[] dataOrigin = new byte[request.getContentLength()];
+    @PostMapping(path = "/donate",produces = "application/json; charset=UTF-8")
+    @ResponseBody
+    public NormalResponse donate(@RequestBody DonateRequest donateRequest){
+        return NormalResponse.success(inclusiveCharityService.donate(donateRequest));
 
-        return responseFormat;
-    }
-
-    @GetMapping(path = "/getApi/{appId}",produces = "application/json; charset=UTF-8" )
-    public String getApi(@PathVariable("appId") String appId, String bb,@RequestHeader  String b
-    , String aa){
-        String String = inclusiveCharityService.getByAppId(appId);
-        if(String !=null){
-            return inclusiveCharityService.getByAppId(appId);
-        }else {
-            return null;
-        }
     }
 
 
