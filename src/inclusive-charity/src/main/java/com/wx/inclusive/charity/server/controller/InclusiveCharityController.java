@@ -14,6 +14,7 @@ import java.util.Map;
  */
 
 @RestController
+@CrossOrigin("*")
 @RequestMapping(value = "/api")
 @Slf4j
 public class InclusiveCharityController {
