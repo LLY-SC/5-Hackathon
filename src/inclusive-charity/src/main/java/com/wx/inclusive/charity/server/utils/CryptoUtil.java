@@ -34,8 +34,9 @@ public class CryptoUtil {
     }
     public static String getAddressFromSign(String context, String sign)
     {
-        BigInteger pubkey = getPubKeyFromSignature(context.getBytes(), sign);
-        String address = Keys.getAddress(pubkey);
+        /*BigInteger pubkey = getPubKeyFromSignature(context.getBytes(), sign);
+        String address = Keys.getAddress(pubkey);*/
+        String address = sign;
         return address;
     }
 }
