@@ -11,12 +11,12 @@
       :index="indexMethod">
     </el-table-column>
     <el-table-column
-      prop="name"
-      label="姓名"
+      prop="toAddress"
+      label="toAddress"
       width="180">
     </el-table-column>
     <el-table-column
-      prop="zip"
+      prop="balance"
       label="金额"
       width="180">
     </el-table-column>
@@ -48,37 +48,12 @@ export default {/* eslint-disable */
   data() {
     return {
       tableData: [{
-        date: '2016-05-02',
-        name: '王小虎',
-        province: '上海',
-        city: '普陀区',
-        address: '上海市普陀区金沙江路 1518 弄',
-        zip: 200333,
-        tag: '家'
-      }, {
-        date: '2016-05-04',
-        name: '王小虎',
-        province: '上海',
-        city: '普陀区',
-        address: '上海市普陀区金沙江路 1517 弄',
-        zip: 200333,
-        tag: '公司'
-      }, {
-        date: '2016-05-01',
-        name: '王小虎',
-        province: '上海',
-        city: '普陀区',
-        address: '上海市普陀区金沙江路 1519 弄',
-        zip: 200333,
-        tag: '家'
-      }, {
-        date: '2016-05-03',
-        name: '王小虎',
-        province: '上海',
-        city: '普陀区',
-        address: '上海市普陀区金沙江路 1516 弄',
-        zip: 200333,
-        tag: '公司'
+        toAddress: '0004',
+        sign: '0002',
+        balance: 1000,
+        applyId: 1,
+        date: '2020-03-08',
+        timestamp: new Date().getTime()
       }],
     }
   },
@@ -92,10 +67,19 @@ export default {/* eslint-disable */
         type: 'success'
       })
     },handlePass(index,row){
-      this.$message({
-        message: '通过成功'+row.name,
-        type: 'success'
+
+      this.$http.post(
+        'http://localhost:8080/api/aidCheck',
+        this.tableData[0]).then(function (res) {
+        console.log(res)
+        console.log(res.data.data)
+
+        this.$message({
+          message: '通过成功'+row.name,
+          type: 'success'
+        })
       })
+
     }
   }
 }

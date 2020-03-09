@@ -144,7 +144,8 @@ data() {
       balance: 1000,
       timestamp: new Date().getTime(),
       toAddress: '0002',
-      sign: '0001'
+      sign: '0001',
+      address: '0001'
     },
     logImage:{
       fits: ['fill', 'contain', 'cover', 'none', 'scale-down'],

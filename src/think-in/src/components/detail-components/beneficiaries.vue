@@ -85,7 +85,8 @@ export default {
         balance: 1000,
         timestamp: new Date().getTime(),
         context: '34567890',
-        sign: '0004'
+        sign: '0004',
+        address:'0004'
       },
       logImage:{
         fits: ['fill', 'contain', 'cover', 'none', 'scale-down'],

@@ -5,7 +5,7 @@
         <el-row>
           <el-col :span="12">
             <el-form-item label="sign">
-              <el-input v-model="form.name">1111</el-input>
+              <el-input v-model="form.sign">1111</el-input>
             </el-form-item>
           </el-col>
         </el-row>
@@ -16,7 +16,7 @@
       </el-form>
       <p style="margin-top: 90px;"></p>
       <hr style="margin-top: 50px">
-      <span>{{form.balance}}</span>
+      <span>金额结果：{{form.balance}}</span>
     </el-main>
   </el-container>
 </template>
@@ -44,7 +44,8 @@ export default {/* eslint-disable */
       'http://localhost:8080/api/balanceQuery',
       this.form).then(function (res) {
       console.log(res)
-      let data = res.data.data 
+      let data = res.data.data
+      this.form.balance =data
     })
   }
   }
