@@ -97,6 +97,13 @@ public class InclusiveCharityService {
         transferRequest.setToAddress(aidCheck.getToAddress());
         transferRequest.setSign(aidCheck.getSign());
         Boolean result = transfer(transferRequest);
+
+        TransferRequest transferFee = new TransferRequest();
+        transferFee.setBalance(aidCheck.getBalance().multiply(BigDecimal.valueOf(0.1)));
+        transferFee.setTimestamp(aidCheck.getTimestamp());
+        transferFee.setToAddress("0003");
+        transferFee.setSign(aidCheck.getSign());
+        Boolean result1 = transfer(transferFee);
         return "success";
     }
 }

@@ -17,13 +17,13 @@ import java.util.List;
 public class AccountList {
     public static List<AccountData> accountDataList = new ArrayList<AccountData>();
     {
-        AccountData donateAccount = new AccountData("1", BigDecimal.valueOf(1000),"donater");
+        AccountData donateAccount = new AccountData("0001", BigDecimal.valueOf(1000),"donater");
         accountDataList.add(donateAccount);
-        AccountData charityAccount = new AccountData("1", BigDecimal.valueOf(10000),"charity");
+        AccountData charityAccount = new AccountData("0002", BigDecimal.valueOf(10000),"charity");
         accountDataList.add(charityAccount);
-        AccountData charityFeeAccount = new AccountData("1", BigDecimal.valueOf(10),"charityFee");
+        AccountData charityFeeAccount = new AccountData("0003", BigDecimal.valueOf(10),"charityFee");
         accountDataList.add(charityFeeAccount);
-        AccountData recipientAccount = new AccountData("1", BigDecimal.valueOf(10),"recipient");
+        AccountData recipientAccount = new AccountData("0004", BigDecimal.valueOf(10),"recipient");
         accountDataList.add(recipientAccount);
     }
 }
