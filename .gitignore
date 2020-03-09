@@ -11,3 +11,4 @@ src/inclusive-charity/.gradle/
 src/inclusive-charity/bin/
 src/inclusive-charity/bin/*
 /src/think-in/node_modules/
+.DS_Store
